@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kishin Store</title>
+<meta name="description" content="Official store of Kishin Skyblock. Buy credits and spend them in game on ranks, crate keys and the battlepass.">
+<meta name="theme-color" content="#0B0809">
+<meta property="og:title" content="Kishin Store">
+<meta property="og:description" content="Buy credits for Kishin Skyblock - ranks, crate keys, the monthly Kishin rank and more.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="bg-glow"></div><div class="bg-waves"></div></div>
+
+<div class="announce" id="announce" hidden></div>
+
+<header class="nav">
+  <a class="logo" href="#top" aria-label="Kishin Store home"><span class="star">✦</span> KISHIN <span class="dim">STORE</span></a>
+  <nav class="links">
+    <a href="#credits">Credits</a>
+    <a href="#spend">What to buy</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="nav-right">
+    <a class="btn ghost small" id="discordBtn" href="#" target="_blank" rel="noopener">Discord</a>
+    <button class="user-chip" id="userChip" type="button">
+      <img id="userHead" alt="" src="" hidden>
+      <span id="userName">Set username</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <p class="eyebrow"><span class="star">✦</span> Official store <span class="star">✦</span></p>
+    <h1 class="title"><span>KISHIN</span> SKYBLOCK</h1>
+    <p class="lead">Buy <strong>credits</strong>, then spend them in game with <code>/buy</code>. Ranks, crate keys, the monthly Kishin rank and the battlepass.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#credits">Get credits</a>
+      <button class="ip" id="ipBtn" type="button" title="Copy server IP">
+        <span class="dot" id="statusDot"></span>
+        <span id="ipText">play.kishin.gg</span>
+        <span class="ip-sub" id="onlineText">click to copy</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="section" id="credits">
+    <div class="section-head">
+      <h2><span class="star">✦</span> Credit packs</h2>
+      <p>100 credits = 1 {currency}. They arrive in game automatically, even if you're offline.</p>
+    </div>
+    <div class="packs" id="packs">
+      <div class="pack skeleton"></div><div class="pack skeleton"></div><div class="pack skeleton"></div>
+    </div>
+    <form class="code-box" id="codeForm" autocomplete="off">
+      <label for="codeInput">Have a coupon or creator code?</label>
+      <div class="code-row">
+        <input id="codeInput" maxlength="40" placeholder="Enter code">
+        <button class="btn ghost small" type="submit">Save</button>
+      </div>
+      <p class="hint" id="codeHint">It's applied when you check out.</p>
+    </form>
+  </section>
+
+  <section class="section" id="spend">
+    <div class="section-head">
+      <h2><span class="star">✦</span> Spend them in game</h2>
+      <p>Type <code>/buy</code> on the server. If you can afford it, it's yours instantly.</p>
+    </div>
+    <div class="tiles">
+      <article class="tile">
+        <div class="tile-icon">⛩</div>
+        <h3>Ranks</h3>
+        <p>Kappa, Namahage and Kitsune. Permanent ranks with perks, pet slots and commands. Skip ahead and only pay for what you don't have.</p>
+      </article>
+      <article class="tile featured">
+        <div class="tile-icon">鬼</div>
+        <h3>Kishin Monthly</h3>
+        <p>The top rank for 30 days: 5 pet slots, hub flight, reduced cooldowns, exclusive cosmetics. Renew any time - days stack.</p>
+      </article>
+      <article class="tile">
+        <div class="tile-icon">🗝</div>
+        <h3>Crate keys</h3>
+        <p>Yokai, Tengu and Fujin keys. Bundles of 3, 5 and 10 get up to 20% off. Pet eggs, money, gems and more inside.</p>
+      </article>
+      <article class="tile">
+        <div class="tile-icon">✦</div>
+        <h3>Battlepass</h3>
+        <p>100 levels of premium rewards for the whole season: tags, trails, keys and lootboxes.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="community" hidden>
+    <div class="section-head"><h2><span class="star">✦</span> Community</h2></div>
+    <div class="community" id="communityBody"></div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="section-head"><h2><span class="star">✦</span> FAQ</h2></div>
+    <div class="faq">
+      <details><summary>How do I get my credits?</summary><p>Enter your exact Minecraft username, pick a pack and pay. The credits are added to your account automatically within about a minute, even if you're offline. Check them in game with <code>/credits</code>.</p></details>
+      <details><summary>Can I buy credits for a friend?</summary><p>Yes. Set their username instead of yours before you pick a pack. The credits go to whoever's name is in the basket.</p></details>
+      <details><summary>I paid but didn't get anything.</summary><p>Wait a few minutes and rejoin. If they still aren't there, open a ticket on our Discord with your username and the transaction ID from your receipt email.</p></details>
+      <details><summary>Which payment methods can I use?</summary><p>Checkout is handled by Tebex, our official payment partner. You'll see every method available in your country (cards, PayPal and more) on the checkout page.</p></details>
+      <details><summary>Are purchases refundable?</summary><p>Credits are a digital good delivered instantly. See the terms on the checkout page, and contact us on Discord if something went wrong.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p><span class="star">✦</span> Kishin Skyblock <span class="star">✦</span></p>
+  <p class="fine">Payments are processed by Tebex. Kishin Skyblock is not affiliated with or endorsed by Mojang Studios or Microsoft. Minecraft is a trademark of Mojang Studios.</p>
+</footer>
+
+<!-- username dialog -->
+<dialog class="modal" id="userModal">
+  <form method="dialog" class="modal-body" id="userForm">
+    <h3><span class="star">✦</span> Who are the credits for?</h3>
+    <p>Enter the exact Minecraft username. The credits are delivered to this player.</p>
+    <div class="user-preview">
+      <img id="previewHead" alt="" src="">
+      <input id="userInput" maxlength="16" placeholder="Username" autocomplete="username" required pattern="[A-Za-z0-9_.]{3,16}">
+    </div>
+    <p class="hint error" id="userError" hidden>Usernames are 3-16 letters, numbers or underscores.</p>
+    <div class="modal-actions">
+      <button class="btn ghost" value="cancel" type="button" id="userCancel">Cancel</button>
+      <button class="btn primary" id="userSave" type="submit">Continue</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- checkout overlay -->
+<div class="overlay" id="overlay" hidden>
+  <div class="spinner"></div>
+  <p id="overlayText">Preparing your checkout...</p>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/config.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
