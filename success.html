@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank you - Kishin Store</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .thanks { max-width: 560px; margin: 0 auto; text-align: center; padding: 110px 0 60px; }
+  .thanks img { width: 96px; height: 96px; border-radius: 16px; image-rendering: pixelated; box-shadow: 0 0 0 3px var(--crimson), 0 0 40px rgba(214,40,57,.5); }
+  .thanks h1 { font: 400 72px/1 "Bebas Neue", Impact, sans-serif; margin: 26px 0 10px; letter-spacing: .03em; }
+  .thanks p { color: var(--muted); font-size: 17px; }
+  .steps { text-align: left; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px 22px; margin: 26px 0; }
+  .steps li { margin: 6px 0; color: var(--muted); }
+  .steps strong { color: var(--text); }
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="bg-glow"></div><div class="bg-waves"></div></div>
+<main>
+  <section class="thanks">
+    <img id="head" src="https://mc-heads.net/avatar/MHF_Question/96" alt="">
+    <h1><span class="star">✦</span> Thank you! <span class="star">✦</span></h1>
+    <p id="msg">Your purchase is complete. Every purchase keeps Kishin running.</p>
+    <ol class="steps">
+      <li>Your credits arrive <strong>automatically</strong>, usually within a minute.</li>
+      <li>Check them in game with <code>/credits</code>.</li>
+      <li>Spend them with <code>/buy</code> - ranks, keys, the monthly rank and the battlepass.</li>
+    </ol>
+    <a class="btn primary" href="./">Back to the store</a>
+  </section>
+</main>
+<script>
+  const u = new URLSearchParams(location.search).get("u");
+  if (u && /^[A-Za-z0-9_.]{3,16}$/.test(u)) {
+    document.getElementById("head").src = "https://mc-heads.net/avatar/" + encodeURIComponent(u) + "/96";
+    document.getElementById("msg").textContent = "Thanks, " + u + "! Your purchase is complete. Every purchase keeps Kishin running.";
+  }
+</script>
+</body>
+</html>
